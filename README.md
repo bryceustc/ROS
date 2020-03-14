@@ -522,6 +522,7 @@ odom实时信息：
 
 odom实时信息：
 
+![](https://github.com/bryceustc/ROS/blob/master/img/11.png)
 
 整体一个rqt_graph如下图所示：
 
