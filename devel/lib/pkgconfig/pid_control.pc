@@ -1,0 +1,8 @@
+prefix=/home/bryce/pid_control_ws/devel
+
+Name: pid_control
+Description: Description of pid_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/bryce/pid_control_ws/devel/lib 
+Requires: 

@@ -1,0 +1,7 @@
+<launch>
+
+	<node name="path_planner" pkg="path" type="path_node" output="screen">
+
+	</node>
+
+</launch>

@@ -1,0 +1,24 @@
+<launch>
+
+    
+		<include file="$(find turtlebot3_fake)/launch/turtlebot3_fake.launch"/>
+		
+		<include file="$(find path)/launch/path.launch">
+		
+		</include>
+    
+    
+    <node name="pid_control_node" pkg="pid_control" type="pid_control_node" output="screen">
+        <!--param name="frame" value="$(arg frame)"/>
+        <param name="worldFrame" value="$(arg worldFrame)"/>
+        <rosparam command="load" file="$(find pid_navigation)/config/utils.yaml"/-->
+
+        <remap from="pid_control_node/cmd_vel" to="cmd_vel"/>
+        <remap from="pid_control_node/odom" to="odom"/>
+        <remap from="pid_control_node/path" to="path"/>
+
+    </node>
+		
+
+
+</launch>

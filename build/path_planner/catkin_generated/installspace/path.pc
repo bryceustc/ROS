@@ -1,0 +1,8 @@
+prefix=/home/bryce/pid_control_ws/install
+
+Name: path
+Description: Description of path
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/bryce/pid_control_ws/install/lib 
+Requires: 
