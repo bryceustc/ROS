@@ -1,6 +1,6 @@
 ## Working Report of 2019 Summer
 对所设计Path，Odom_fake，Controller部分进行一些简要的readme说明，以及目前存在的一些问题。
-####1. Path部分：
+#### 1. Path部分：
 path代码：
 ```c++
 #include <ros/ros.h>
@@ -87,7 +87,7 @@ rosrun rviz rviz
 
 ![](https://github.com/bryceustc/ROS/blob/master/img/3.png)
 
-####2. Odom_fake部分：
+#### 2. Odom_fake部分：
 turtlebot3_fake代码:
 ```c++
 #include <turtlebot3_fake/turtlebot3_fake.h>
@@ -294,7 +294,7 @@ rosrun rviz rviz`
 
 此odom会反馈当前小车的位置信息，速度信息，传给控制器以便控制小车运动。
 
-####3. Controller部分：
+#### 3. Controller部分：
 controller 代码：
 ```c++
 #include <ros/ros.h>
@@ -535,7 +535,7 @@ Odom_fake 设定轮间距为0.35m，仿真车轮半径与实际小车类似，�
 手柄控制急停，长按B键急停制动锁死，按X键解除锁死，以及手柄与pid_controller的切换也在相关文件中有说明。
 以上一些代码都做了部分注释，且所需头文件已放在相关文件夹中。
 
-####4. 当前存在的问题：
+#### 4. 当前存在的问题：
 （1）实际Odom计算暂时不够准确。目标点设定为（3,0）实际也是沿x轴走了3m，但实际里程计显示只有（2.2，-0.6）左右，还需进一步调试odom的精准度。
 （2）目前剑灏设计的dwa_planner与pid_controller一起运行时会报错，dwa_planner设计需要odom信息知道当前位置信息来规划下一时刻路径，而pid_controller需要路径规划好的目标点才会运动，这有一点矛盾，而且发布的路径规划的坐标点过多过快不知controller是否没有成功读取。
 （3）pid_controller部分还需要根据实际调试效果进行调参。
